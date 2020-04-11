@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "67:67/udp"
+      - "80:80/tcp"
+      - "443:443/tcp"
+    environment:
+      WEBPASSWORD: "${PIHOLE_PASSWORD}"
+      PUID: 1000
+      GUID: 1000
+    volumes:
+       - $HOME/pihole/:/etc/pihole/
+       - $HOME/pihole/dnsmasq.d/:/etc/dnsmasq.d/
+    cap_add:
+      - NET_ADMIN
+    dns:
+      - 127.0.0.1
+      - 1.1.1.1
+    restart: unless-stopped
+

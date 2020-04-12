@@ -1,6 +1,4 @@
-192.168.0.102   hyrule.lan              hyrule
-192.168.0.103   hogwarts.lan            hogwarts
+192.168.0.1	router.lan		router
 192.168.0.104   jeff-bridges.lan        jeff-bridges
 192.168.0.105   tv.lan                  tv
-192.168.0.106   evergreen-terrace.lan   evergreen-terrace
-192.168.0.107	jack-sapbook.lan	jack-sapbook
+192.168.0.107	jack-macbook.lan	jack-macbook

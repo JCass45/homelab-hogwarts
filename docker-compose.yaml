@@ -16,7 +16,7 @@ services:
       GUID: 1000
     volumes:
        - $HOME/pihole/:/etc/pihole/
-       - $HOME/pihole/dnsmasq.d/:/etc/dnsmasq.d/
+       - $HOME/dnsmasq.d:/etc/dnsmasq.d
     cap_add:
       - NET_ADMIN
     dns:
